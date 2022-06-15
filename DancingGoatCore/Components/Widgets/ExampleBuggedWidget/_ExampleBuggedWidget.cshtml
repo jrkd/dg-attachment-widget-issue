@@ -1,0 +1,18 @@
+﻿@using DancingGoat.InlineEditors
+@using DancingGoat.Widgets
+
+@model ExampleBuggedWidgetModel
+
+@{
+
+    bool editMode = Context.Kentico().PageBuilder().EditMode;
+}
+
+<div>
+    <h1>Original image url:</h1>
+    <img src="@Model.ImageURL" />
+</div>
+<div>
+    <h1>Variant image url (this will be broken until you hit page save button):</h1>
+    <img src="@Model.ImageVarientURL" />
+</div>
